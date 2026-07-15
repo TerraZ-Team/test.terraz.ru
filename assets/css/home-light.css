@@ -1,0 +1,254 @@
+.terraz-home-page,
+.terraz-home-page .initial-content,
+.terraz-home {
+  color: #26383a;
+  background: #f3f7f6;
+}
+
+.terraz-home-page .masthead {
+  border-bottom-color: #dce6e5;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1px 7px rgba(26, 62, 64, 0.04);
+}
+
+.terraz-home-page .greedy-nav,
+.terraz-home-page .greedy-nav .hidden-links {
+  background: transparent;
+}
+
+.terraz-home-page .greedy-nav a,
+.terraz-home-page .greedy-nav .site-title {
+  color: #314648;
+}
+
+.terraz-home-page .greedy-nav a:hover,
+.terraz-home-page .greedy-nav a:focus,
+.terraz-home-page .greedy-nav .site-title:hover {
+  color: #168b87;
+}
+
+.terraz-home-page .page__footer {
+  color: #657476;
+  border-top-color: #dce6e5;
+  background: #e9f0ef;
+}
+
+.terraz-home-page .page__footer a {
+  color: #40595b;
+}
+
+.terraz-home-page .page__footer a:hover {
+  color: #168b87;
+}
+
+.terraz-kicker {
+  color: #168b87;
+}
+
+.terraz-intro {
+  padding: 46px 0 42px;
+  border-bottom-color: #dce6e5;
+  background: linear-gradient(180deg, #e8f3f2 0%, #f3f7f6 88%);
+}
+
+.terraz-intro__layout {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 470px);
+  gap: 38px;
+}
+
+.terraz-intro h1,
+.terraz-section__heading h2,
+.terraz-community h2 {
+  color: #203638;
+}
+
+.terraz-intro h1 {
+  font-size: clamp(2.45rem, 5vw, 3.75rem);
+}
+
+.terraz-intro__subtitle {
+  color: #344c4e;
+}
+
+.terraz-intro__lead,
+.terraz-section__heading > p:last-child,
+.terraz-community p:not(.terraz-kicker) {
+  color: #647476;
+}
+
+.terraz-intro__links a {
+  color: #168b87;
+}
+
+.terraz-intro__links a:hover,
+.terraz-intro__links a:focus-visible {
+  color: #203638;
+}
+
+.terraz-connect--compact {
+  padding: 13px;
+  border-color: #d6e2e1;
+  border-radius: 7px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(27, 62, 64, 0.07);
+}
+
+.terraz-connect__label {
+  margin-bottom: 7px;
+  color: #708082;
+}
+
+.terraz-connect__compact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.terraz-connect__address-row {
+  border-color: #e5c76d;
+  background: #ffe595;
+}
+
+.terraz-connect__address {
+  min-height: 40px;
+  padding: 0 12px;
+  font-size: 0.8rem;
+}
+
+.terraz-copy {
+  min-width: 44px;
+  padding: 0 11px;
+}
+
+.terraz-button {
+  min-height: 40px;
+}
+
+.terraz-button--primary {
+  padding: 0 14px;
+  color: #ffffff;
+  white-space: nowrap;
+  background: #188f8a;
+}
+
+.terraz-button--primary:hover,
+.terraz-button--primary:focus-visible {
+  color: #ffffff;
+  background: #11736f;
+}
+
+.terraz-connect__status {
+  display: block;
+  min-height: 0;
+  margin-top: 0;
+  font-size: 0.65rem;
+  color: #168b87;
+}
+
+.terraz-connect__status:not(:empty) {
+  margin-top: 7px;
+}
+
+.terraz-section {
+  padding: 48px 0;
+  border-bottom-color: #dce6e5;
+  background: #f3f7f6;
+}
+
+.terraz-service-card {
+  color: #26383a;
+  border-color: #dce6e5;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(24, 54, 56, 0.025);
+}
+
+.terraz-service-card:hover,
+.terraz-service-card:focus-visible {
+  color: #26383a;
+  border-color: rgba(31, 184, 178, 0.45);
+  background: #fbfdfd;
+  box-shadow: 0 7px 18px rgba(24, 54, 56, 0.06);
+}
+
+.terraz-service-card__icon {
+  color: #168b87;
+  background: #e8f5f4;
+}
+
+.terraz-service-card__content strong {
+  color: #26383a;
+}
+
+.terraz-service-card__content small {
+  color: #6a787a;
+}
+
+.terraz-service-card__arrow {
+  color: #9ca8a9;
+}
+
+.terraz-community {
+  padding: 42px 0;
+  border-top: 0;
+  background: #e7f0ef;
+}
+
+.terraz-community__links a {
+  color: #405456;
+  border-color: #d2dfde;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.terraz-community__links a:hover,
+.terraz-community__links a:focus-visible {
+  color: #203638;
+  border-color: rgba(31, 184, 178, 0.42);
+  background: #ffffff;
+}
+
+.terraz-community__links i {
+  color: #168b87;
+}
+
+@media (max-width: 880px) {
+  .terraz-intro__layout {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .terraz-connect--compact {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .terraz-intro {
+    padding: 36px 0 34px;
+  }
+
+  .terraz-intro h1 {
+    font-size: 2.55rem;
+  }
+
+  .terraz-connect__compact-row {
+    grid-template-columns: 1fr;
+  }
+
+  .terraz-button--primary {
+    width: 100%;
+  }
+
+  .terraz-copy span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .terraz-section {
+    padding: 42px 0;
+  }
+}
