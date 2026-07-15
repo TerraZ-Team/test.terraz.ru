@@ -1,10 +1,14 @@
 # main links
 main:
-  - title: "Гайды"
-    url: /guides/
+  - title: "Начать играть"
+    url: /#play
+  - title: "Правила"
+    url: /rules/
   - title: "Новости"
     url: /news/
   - title: "Статистика"
     url: https://statistics.terraz.ru/
-  - title: "Карты"
+  - title: "Карта"
     url: https://map.terraz.ru/
+  - title: "Магазин"
+    url: https://store.terraz.ru/
