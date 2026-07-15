@@ -29,4 +29,16 @@ jobs:
         run: node --check assets/js/terraz-home.js
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build --trace
+        shell: bash
+        run: |
+          set -o pipefail
+          bundle exec jekyll build --trace 2>&1 | tee jekyll-build.log
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-build-log
+          path: jekyll-build.log
+          if-no-files-found: ignore
+          retention-days: 3
