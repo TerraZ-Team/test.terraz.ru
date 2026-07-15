@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/article.css' | relative_url }}">
+
+<article class="tz-article-page" itemscope itemtype="https://schema.org/Article">
+  {% if page.title %}<meta itemprop="headline" content="{{ page.title | strip_html | escape }}">{% endif %}
+  {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | strip_html | strip_newlines | escape }}">{% endif %}
+  {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+
+  <header class="tz-article-hero">
+    <div class="tz-article-container">
+      <a class="tz-article-back" href="{{ '/guides/' | relative_url }}">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+        Все гайды
+      </a>
+      <p class="tz-kicker">База знаний TerraZ</p>
+      <h1 itemprop="headline">{{ page.title }}</h1>
+      {% if page.excerpt %}
+        <p class="tz-article-summary">{{ page.excerpt | markdownify | strip_html }}</p>
+      {% endif %}
+      {% if page.tags and page.tags.size > 0 %}
+        <div class="tz-article-tags" aria-label="Темы материала">
+          {% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="tz-article-container tz-article-layout">
+    {% if page.toc %}
+      <aside class="tz-article-sidebar" aria-label="Содержание статьи">
+        <nav class="tz-article-toc">
+          <div class="tz-article-toc__title">
+            <i class="fas fa-list-ul" aria-hidden="true"></i>
+            Содержание
+          </div>
+          {% include toc.html sanitize=true html=content h_min=2 h_max=3 class="tz-article-toc__menu" skip_no_ids=true %}
+        </nav>
+      </aside>
+    {% endif %}
+
+    <main class="tz-article-body" itemprop="articleBody">
+      {{ content }}
+
+      <footer class="tz-article-footer">
+        <a href="{{ '/guides/' | relative_url }}">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          Вернуться к списку гайдов
+        </a>
+      </footer>
+    </main>
+  </div>
+</article>
