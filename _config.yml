@@ -137,9 +137,9 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: article
       author_profile: false
-      read_time: true
+      read_time: false
       comments: false
       share: false
       related: false
