@@ -2,13 +2,13 @@
 main:
   - title: "Начать играть"
     url: /#play
+  - title: "Гайды"
+    url: /guides/
   - title: "Правила"
     url: /rules/
   - title: "Новости"
     url: /news/
-  - title: "Статистика"
-    url: https://statistics.terraz.ru/
   - title: "Карта"
     url: https://map.terraz.ru/
-  - title: "Магазин"
-    url: https://store.terraz.ru/
+  - title: "Статистика"
+    url: https://statistics.terraz.ru/
