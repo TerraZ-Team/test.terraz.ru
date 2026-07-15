@@ -1,65 +1,184 @@
 ---
-layout: splash
+layout: default
 permalink: /
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/unsplash-image-1.jpg
-  actions:
-    - label: "Download"
-      url: "https://github.com/mmistakes/minimal-mistakes/"
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-excerpt: "Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop."
-intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
-feature_row:
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-feature_row2:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row3:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Right Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Right aligned with `type="right"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row4:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Center Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+title: "TerraZ — русскоязычный сервер Terraria"
+description: "Информационный портал TerraZ: подключение к серверу Terraria, правила, новости, карта, статистика и сообщество."
+classes:
+  - terraz-home-page
 ---
 
-{% include feature_row id="intro" type="center" %}
+<main class="terraz-home">
+  <section class="terraz-hero" id="play" aria-labelledby="terraz-hero-title">
+    <div class="terraz-hero__grid" aria-hidden="true"></div>
+    <div class="terraz-shell terraz-hero__layout">
+      <div class="terraz-hero__content">
+        <p class="terraz-eyebrow"><span></span> Информационный портал TerraZ</p>
+        <div class="terraz-wordmark" aria-label="TerraZ">Terra<span>Z</span></div>
+        <h1 id="terraz-hero-title">Играй. Строй. Возвращайся.</h1>
+        <p class="terraz-hero__lead">
+          Русскоязычный сервер Terraria и все полезные сервисы проекта в одном месте:
+          подключение, правила, новости, карта мира, статистика и сообщество.
+        </p>
 
-{% include feature_row %}
+        <div class="terraz-connect" aria-label="Подключение к серверу">
+          <div class="terraz-connect__label">Адрес сервера</div>
+          <div class="terraz-connect__address-row">
+            <code class="terraz-connect__address" data-server-address>S.TERRAZ.RU:7777</code>
+            <button class="terraz-copy" type="button" data-copy-server aria-label="Скопировать адрес сервера">
+              <i class="far fa-copy" aria-hidden="true"></i>
+              <span>Копировать</span>
+            </button>
+          </div>
+          <div class="terraz-connect__actions">
+            <a class="terraz-button terraz-button--primary" href="steam://rungameid/105600// -j s.terraz.ru -p 7777">
+              <i class="fab fa-steam" aria-hidden="true"></i>
+              Играть через Steam
+            </a>
+            <a class="terraz-button terraz-button--ghost" href="/rules/">
+              Прочитать правила
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+          <p class="terraz-connect__hint" data-copy-status aria-live="polite">
+            Steam откроет Terraria и передаст адрес сервера автоматически.
+          </p>
+        </div>
+      </div>
 
-{% include feature_row id="feature_row2" type="left" %}
+      <aside class="terraz-hero__panel" aria-label="Быстрый доступ">
+        <div class="terraz-panel__topline">
+          <span>TerraZ Network</span>
+          <span class="terraz-panel__pulse">Portal</span>
+        </div>
+        <h2>Всё нужное рядом</h2>
+        <p>Не нужно рыться в старых публикациях и случайных ссылках. Основные разделы проекта собраны здесь.</p>
+        <ul class="terraz-panel__list">
+          <li><i class="fas fa-shield-alt" aria-hidden="true"></i><span>Правила сервера и сообщества</span></li>
+          <li><i class="fas fa-map" aria-hidden="true"></i><span>Карта игрового мира</span></li>
+          <li><i class="fas fa-chart-line" aria-hidden="true"></i><span>Статистика проекта</span></li>
+          <li><i class="fas fa-comments" aria-hidden="true"></i><span>Связь с игроками и администрацией</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
 
-{% include feature_row id="feature_row3" type="right" %}
+  <section class="terraz-section" id="services" aria-labelledby="services-title">
+    <div class="terraz-shell">
+      <div class="terraz-section__heading">
+        <div>
+          <p class="terraz-kicker">Навигация</p>
+          <h2 id="services-title">Основные разделы</h2>
+        </div>
+        <p>Актуальные страницы проекта без лишних переходов и случайных ссылок.</p>
+      </div>
 
-{% include feature_row id="feature_row4" type="center" %}
+      <div class="terraz-service-grid">
+        <a class="terraz-service-card" href="/rules/">
+          <span class="terraz-service-card__icon"><i class="fas fa-gavel" aria-hidden="true"></i></span>
+          <span class="terraz-service-card__content">
+            <strong>Правила</strong>
+            <small>Требования к игре, общению и работе привилегированных игроков.</small>
+          </span>
+          <i class="fas fa-arrow-right terraz-service-card__arrow" aria-hidden="true"></i>
+        </a>
+
+        <a class="terraz-service-card" href="/news/">
+          <span class="terraz-service-card__icon"><i class="far fa-newspaper" aria-hidden="true"></i></span>
+          <span class="terraz-service-card__content">
+            <strong>Новости</strong>
+            <small>Изменения на сервере, важные объявления и события проекта.</small>
+          </span>
+          <i class="fas fa-arrow-right terraz-service-card__arrow" aria-hidden="true"></i>
+        </a>
+
+        <a class="terraz-service-card" href="https://statistics.terraz.ru/" target="_blank" rel="noopener noreferrer">
+          <span class="terraz-service-card__icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></span>
+          <span class="terraz-service-card__content">
+            <strong>Статистика</strong>
+            <small>Показатели сервера и данные об игровой активности.</small>
+          </span>
+          <i class="fas fa-external-link-alt terraz-service-card__arrow" aria-hidden="true"></i>
+        </a>
+
+        <a class="terraz-service-card" href="https://map.terraz.ru/" target="_blank" rel="noopener noreferrer">
+          <span class="terraz-service-card__icon"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></span>
+          <span class="terraz-service-card__content">
+            <strong>Карта</strong>
+            <small>Интерактивный обзор игрового мира TerraZ.</small>
+          </span>
+          <i class="fas fa-external-link-alt terraz-service-card__arrow" aria-hidden="true"></i>
+        </a>
+
+        <a class="terraz-service-card" href="https://store.terraz.ru/" target="_blank" rel="noopener noreferrer">
+          <span class="terraz-service-card__icon"><i class="fas fa-shopping-bag" aria-hidden="true"></i></span>
+          <span class="terraz-service-card__content">
+            <strong>Магазин</strong>
+            <small>Привилегии и другие способы поддержать развитие проекта.</small>
+          </span>
+          <i class="fas fa-external-link-alt terraz-service-card__arrow" aria-hidden="true"></i>
+        </a>
+
+        <a class="terraz-service-card" href="https://terraz.ru/conference" target="_blank" rel="noopener noreferrer">
+          <span class="terraz-service-card__icon"><i class="fab fa-discord" aria-hidden="true"></i></span>
+          <span class="terraz-service-card__content">
+            <strong>Сообщество</strong>
+            <small>Обсуждение, помощь и связь с участниками TerraZ.</small>
+          </span>
+          <i class="fas fa-external-link-alt terraz-service-card__arrow" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="terraz-section terraz-section--muted" aria-labelledby="start-title">
+    <div class="terraz-shell">
+      <div class="terraz-section__heading terraz-section__heading--compact">
+        <div>
+          <p class="terraz-kicker">Быстрый старт</p>
+          <h2 id="start-title">Как подключиться</h2>
+        </div>
+      </div>
+
+      <ol class="terraz-steps">
+        <li>
+          <span class="terraz-step__number">01</span>
+          <div>
+            <h3>Открой Terraria</h3>
+            <p>Используй кнопку Steam выше или запусти игру обычным способом.</p>
+          </div>
+        </li>
+        <li>
+          <span class="terraz-step__number">02</span>
+          <div>
+            <h3>Подключись по адресу</h3>
+            <p>Выбери сетевую игру и укажи <code>S.TERRAZ.RU:7777</code>.</p>
+          </div>
+        </li>
+        <li>
+          <span class="terraz-step__number">03</span>
+          <div>
+            <h3>Освойся на сервере</h3>
+            <p>Перед игрой прочитай правила. Подробные инструкции появятся в отдельном разделе гайдов.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="terraz-community" aria-labelledby="community-title">
+    <div class="terraz-shell terraz-community__inner">
+      <div>
+        <p class="terraz-kicker">Не оставайся один</p>
+        <h2 id="community-title">TerraZ — это ещё и сообщество</h2>
+        <p>Задавай вопросы, сообщай о проблемах и следи за объявлениями там, где тебе удобнее.</p>
+      </div>
+      <div class="terraz-community__links">
+        <a href="https://terraz.ru/conference" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a>
+        <a href="https://t.me/terraz_discussion" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane" aria-hidden="true"></i> Telegram</a>
+        <a href="https://vk.com/terraz" target="_blank" rel="noopener noreferrer"><i class="fab fa-vk" aria-hidden="true"></i> ВКонтакте</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="{{ '/assets/js/terraz-home.js' | relative_url }}" defer></script>
