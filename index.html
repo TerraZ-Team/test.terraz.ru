@@ -8,94 +8,76 @@ classes:
 ---
 
 <main class="terraz-home">
-  <section class="terraz-hero" id="play" aria-labelledby="terraz-hero-title">
-    <div class="terraz-hero__grid" aria-hidden="true"></div>
-    <div class="terraz-shell terraz-hero__layout">
-      <div class="terraz-hero__content">
-        <p class="terraz-eyebrow"><span></span> Информационный портал TerraZ</p>
-        <div class="terraz-wordmark" aria-label="TerraZ">Terra<span>Z</span></div>
-        <h1 id="terraz-hero-title">Играй. Строй. Возвращайся.</h1>
-        <p class="terraz-hero__lead">
-          Русскоязычный сервер Terraria и все полезные сервисы проекта в одном месте:
-          подключение, правила, новости, карта мира, статистика и сообщество.
+  <section class="terraz-intro" id="play" aria-labelledby="terraz-title">
+    <div class="terraz-shell terraz-intro__layout">
+      <div class="terraz-intro__content">
+        <p class="terraz-kicker">Информационный портал</p>
+        <h1 id="terraz-title">TerraZ</h1>
+        <p class="terraz-intro__subtitle">Русскоязычный сервер Terraria</p>
+        <p class="terraz-intro__lead">
+          Подключение к серверу, правила, новости, карта мира, статистика и ссылки на сообщество проекта.
         </p>
-
-        <div class="terraz-connect" aria-label="Подключение к серверу">
-          <div class="terraz-connect__label">Адрес сервера</div>
-          <div class="terraz-connect__address-row">
-            <code class="terraz-connect__address" data-server-address>S.TERRAZ.RU:7777</code>
-            <button class="terraz-copy" type="button" data-copy-server aria-label="Скопировать адрес сервера">
-              <i class="far fa-copy" aria-hidden="true"></i>
-              <span>Копировать</span>
-            </button>
-          </div>
-          <div class="terraz-connect__actions">
-            <a class="terraz-button terraz-button--primary" href="steam://rungameid/105600// -j s.terraz.ru -p 7777">
-              <i class="fab fa-steam" aria-hidden="true"></i>
-              Играть через Steam
-            </a>
-            <a class="terraz-button terraz-button--ghost" href="/rules/">
-              Прочитать правила
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-          <p class="terraz-connect__hint" data-copy-status aria-live="polite">
-            Steam откроет Terraria и передаст адрес сервера автоматически.
-          </p>
+        <div class="terraz-intro__links">
+          <a href="/rules/">Правила сервера</a>
+          <a href="/news/">Последние новости</a>
         </div>
       </div>
 
-      <aside class="terraz-hero__panel" aria-label="Быстрый доступ">
-        <div class="terraz-panel__topline">
-          <span>TerraZ Network</span>
-          <span class="terraz-panel__pulse">Portal</span>
+      <aside class="terraz-connect" aria-label="Подключение к серверу">
+        <div class="terraz-connect__label">Адрес сервера</div>
+        <div class="terraz-connect__address-row">
+          <code class="terraz-connect__address" data-server-address>S.TERRAZ.RU:7777</code>
+          <button class="terraz-copy" type="button" data-copy-server aria-label="Скопировать адрес сервера">
+            <i class="far fa-copy" aria-hidden="true"></i>
+            <span>Копировать</span>
+          </button>
         </div>
-        <h2>Всё нужное рядом</h2>
-        <p>Не нужно рыться в старых публикациях и случайных ссылках. Основные разделы проекта собраны здесь.</p>
-        <ul class="terraz-panel__list">
-          <li><i class="fas fa-shield-alt" aria-hidden="true"></i><span>Правила сервера и сообщества</span></li>
-          <li><i class="fas fa-map" aria-hidden="true"></i><span>Карта игрового мира</span></li>
-          <li><i class="fas fa-chart-line" aria-hidden="true"></i><span>Статистика проекта</span></li>
-          <li><i class="fas fa-comments" aria-hidden="true"></i><span>Связь с игроками и администрацией</span></li>
-        </ul>
+        <div class="terraz-connect__actions">
+          <a class="terraz-button terraz-button--primary" href="steam://rungameid/105600// -j s.terraz.ru -p 7777">
+            <i class="fab fa-steam" aria-hidden="true"></i>
+            Играть через Steam
+          </a>
+          <a class="terraz-button terraz-button--secondary" href="/rules/">Прочитать правила</a>
+        </div>
+        <p class="terraz-connect__hint" data-copy-status aria-live="polite">
+          Steam откроет Terraria и передаст адрес сервера автоматически.
+        </p>
       </aside>
     </div>
   </section>
 
   <section class="terraz-section" id="services" aria-labelledby="services-title">
     <div class="terraz-shell">
-      <div class="terraz-section__heading">
-        <div>
-          <p class="terraz-kicker">Навигация</p>
-          <h2 id="services-title">Основные разделы</h2>
-        </div>
-        <p>Актуальные страницы проекта без лишних переходов и случайных ссылок.</p>
-      </div>
+      <header class="terraz-section__heading">
+        <p class="terraz-kicker">Навигация</p>
+        <h2 id="services-title">Основные разделы</h2>
+        <p>Полезные страницы и сервисы TerraZ без старых публикаций и лишних переходов.</p>
+      </header>
 
       <div class="terraz-service-grid">
         <a class="terraz-service-card" href="/rules/">
           <span class="terraz-service-card__icon"><i class="fas fa-gavel" aria-hidden="true"></i></span>
           <span class="terraz-service-card__content">
             <strong>Правила</strong>
-            <small>Требования к игре, общению и работе привилегированных игроков.</small>
+            <small>Требования к игре и общению.</small>
           </span>
-          <i class="fas fa-arrow-right terraz-service-card__arrow" aria-hidden="true"></i>
+          <i class="fas fa-chevron-right terraz-service-card__arrow" aria-hidden="true"></i>
         </a>
 
         <a class="terraz-service-card" href="/news/">
           <span class="terraz-service-card__icon"><i class="far fa-newspaper" aria-hidden="true"></i></span>
           <span class="terraz-service-card__content">
             <strong>Новости</strong>
-            <small>Изменения на сервере, важные объявления и события проекта.</small>
+            <small>Объявления и изменения проекта.</small>
           </span>
-          <i class="fas fa-arrow-right terraz-service-card__arrow" aria-hidden="true"></i>
+          <i class="fas fa-chevron-right terraz-service-card__arrow" aria-hidden="true"></i>
         </a>
 
         <a class="terraz-service-card" href="https://statistics.terraz.ru/" target="_blank" rel="noopener noreferrer">
           <span class="terraz-service-card__icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></span>
           <span class="terraz-service-card__content">
             <strong>Статистика</strong>
-            <small>Показатели сервера и данные об игровой активности.</small>
+            <small>Показатели и активность сервера.</small>
           </span>
           <i class="fas fa-external-link-alt terraz-service-card__arrow" aria-hidden="true"></i>
         </a>
@@ -104,7 +86,7 @@ classes:
           <span class="terraz-service-card__icon"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></span>
           <span class="terraz-service-card__content">
             <strong>Карта</strong>
-            <small>Интерактивный обзор игрового мира TerraZ.</small>
+            <small>Интерактивная карта игрового мира.</small>
           </span>
           <i class="fas fa-external-link-alt terraz-service-card__arrow" aria-hidden="true"></i>
         </a>
@@ -113,7 +95,7 @@ classes:
           <span class="terraz-service-card__icon"><i class="fas fa-shopping-bag" aria-hidden="true"></i></span>
           <span class="terraz-service-card__content">
             <strong>Магазин</strong>
-            <small>Привилегии и другие способы поддержать развитие проекта.</small>
+            <small>Привилегии и поддержка проекта.</small>
           </span>
           <i class="fas fa-external-link-alt terraz-service-card__arrow" aria-hidden="true"></i>
         </a>
@@ -122,7 +104,7 @@ classes:
           <span class="terraz-service-card__icon"><i class="fab fa-discord" aria-hidden="true"></i></span>
           <span class="terraz-service-card__content">
             <strong>Сообщество</strong>
-            <small>Обсуждение, помощь и связь с участниками TerraZ.</small>
+            <small>Обсуждение и помощь игрокам.</small>
           </span>
           <i class="fas fa-external-link-alt terraz-service-card__arrow" aria-hidden="true"></i>
         </a>
@@ -132,33 +114,31 @@ classes:
 
   <section class="terraz-section terraz-section--muted" aria-labelledby="start-title">
     <div class="terraz-shell">
-      <div class="terraz-section__heading terraz-section__heading--compact">
-        <div>
-          <p class="terraz-kicker">Быстрый старт</p>
-          <h2 id="start-title">Как подключиться</h2>
-        </div>
-      </div>
+      <header class="terraz-section__heading">
+        <p class="terraz-kicker">Быстрый старт</p>
+        <h2 id="start-title">Как подключиться</h2>
+      </header>
 
       <ol class="terraz-steps">
         <li>
-          <span class="terraz-step__number">01</span>
+          <span class="terraz-step__number">1</span>
           <div>
-            <h3>Открой Terraria</h3>
-            <p>Используй кнопку Steam выше или запусти игру обычным способом.</p>
+            <h3>Запусти Terraria</h3>
+            <p>Открой игру через Steam или воспользуйся кнопкой выше.</p>
           </div>
         </li>
         <li>
-          <span class="terraz-step__number">02</span>
+          <span class="terraz-step__number">2</span>
           <div>
-            <h3>Подключись по адресу</h3>
-            <p>Выбери сетевую игру и укажи <code>S.TERRAZ.RU:7777</code>.</p>
+            <h3>Выбери сетевую игру</h3>
+            <p>Укажи адрес <code>S.TERRAZ.RU:7777</code>.</p>
           </div>
         </li>
         <li>
-          <span class="terraz-step__number">03</span>
+          <span class="terraz-step__number">3</span>
           <div>
-            <h3>Освойся на сервере</h3>
-            <p>Перед игрой прочитай правила. Подробные инструкции появятся в отдельном разделе гайдов.</p>
+            <h3>Прочитай правила</h3>
+            <p>Подробные инструкции позже появятся в разделе гайдов.</p>
           </div>
         </li>
       </ol>
@@ -166,17 +146,17 @@ classes:
   </section>
 
   <section class="terraz-community" aria-labelledby="community-title">
-    <div class="terraz-shell terraz-community__inner">
+    <div class="terraz-shell terraz-community__layout">
       <div>
-        <p class="terraz-kicker">Не оставайся один</p>
-        <h2 id="community-title">TerraZ — это ещё и сообщество</h2>
-        <p>Задавай вопросы, сообщай о проблемах и следи за объявлениями там, где тебе удобнее.</p>
+        <p class="terraz-kicker">Сообщество</p>
+        <h2 id="community-title">Следи за проектом</h2>
+        <p>Новости, обсуждение, помощь игрокам и связь с администрацией.</p>
       </div>
-      <div class="terraz-community__links">
+      <nav class="terraz-community__links" aria-label="Социальные сети TerraZ">
         <a href="https://terraz.ru/conference" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a>
         <a href="https://t.me/terraz_discussion" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane" aria-hidden="true"></i> Telegram</a>
         <a href="https://vk.com/terraz" target="_blank" rel="noopener noreferrer"><i class="fab fa-vk" aria-hidden="true"></i> ВКонтакте</a>
-      </div>
+      </nav>
     </div>
   </section>
 </main>
