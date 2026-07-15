@@ -7,6 +7,8 @@ classes:
   - terraz-home-page
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/home-light.css' | relative_url }}">
+
 <main class="terraz-home">
   <section class="terraz-intro" id="play" aria-labelledby="terraz-title">
     <div class="terraz-shell terraz-intro__layout">
@@ -24,25 +26,22 @@ classes:
         </div>
       </div>
 
-      <aside class="terraz-connect" aria-label="Подключение к серверу">
-        <div class="terraz-connect__label">Адрес сервера</div>
-        <div class="terraz-connect__address-row">
-          <code class="terraz-connect__address" data-server-address>S.TERRAZ.RU:7777</code>
-          <button class="terraz-copy" type="button" data-copy-server aria-label="Скопировать адрес сервера">
-            <i class="far fa-copy" aria-hidden="true"></i>
-            <span>Копировать</span>
-          </button>
-        </div>
-        <div class="terraz-connect__actions">
+      <aside class="terraz-connect terraz-connect--compact" aria-label="Подключение к серверу">
+        <div class="terraz-connect__label">Подключиться к серверу</div>
+        <div class="terraz-connect__compact-row">
+          <div class="terraz-connect__address-row">
+            <code class="terraz-connect__address" data-server-address>S.TERRAZ.RU:7777</code>
+            <button class="terraz-copy" type="button" data-copy-server aria-label="Скопировать адрес сервера">
+              <i class="far fa-copy" aria-hidden="true"></i>
+              <span>Копировать</span>
+            </button>
+          </div>
           <a class="terraz-button terraz-button--primary" href="steam://rungameid/105600// -j s.terraz.ru -p 7777">
             <i class="fab fa-steam" aria-hidden="true"></i>
             Играть через Steam
           </a>
-          <a class="terraz-button terraz-button--secondary" href="/rules/">Прочитать правила</a>
         </div>
-        <p class="terraz-connect__hint" data-copy-status aria-live="polite">
-          Steam откроет Terraria и передаст адрес сервера автоматически.
-        </p>
+        <span class="terraz-connect__status" data-copy-status aria-live="polite"></span>
       </aside>
     </div>
   </section>
@@ -110,39 +109,6 @@ classes:
           <i class="fas fa-external-link-alt terraz-service-card__arrow" aria-hidden="true"></i>
         </a>
       </div>
-    </div>
-  </section>
-
-  <section class="terraz-section terraz-section--muted" aria-labelledby="start-title">
-    <div class="terraz-shell">
-      <header class="terraz-section__heading">
-        <p class="terraz-kicker">Быстрый старт</p>
-        <h2 id="start-title">Как подключиться</h2>
-      </header>
-
-      <ol class="terraz-steps">
-        <li>
-          <span class="terraz-step__number">1</span>
-          <div>
-            <h3>Запусти Terraria</h3>
-            <p>Открой игру через Steam или воспользуйся кнопкой выше.</p>
-          </div>
-        </li>
-        <li>
-          <span class="terraz-step__number">2</span>
-          <div>
-            <h3>Выбери сетевую игру</h3>
-            <p>Укажи адрес <code>S.TERRAZ.RU:7777</code>.</p>
-          </div>
-        </li>
-        <li>
-          <span class="terraz-step__number">3</span>
-          <div>
-            <h3>Освой инструменты</h3>
-            <p>Прочитай правила и открой <a href="/guides/">гайды по возможностям сервера</a>.</p>
-          </div>
-        </li>
-      </ol>
     </div>
   </section>
 
