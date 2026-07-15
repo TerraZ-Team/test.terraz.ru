@@ -1,7 +1,6 @@
-# main links
 main:
-  - title: "Начать играть"
-    url: /#play
+  - title: "Главная"
+    url: /
   - title: "Гайды"
     url: /guides/
   - title: "Правила"
@@ -10,5 +9,6 @@ main:
     url: /news/
   - title: "Карта"
     url: https://map.terraz.ru/
-  - title: "Статистика"
-    url: https://statistics.terraz.ru/
+    target: _blank
+  - title: "Играть"
+    url: /#play
