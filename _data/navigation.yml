@@ -1,14 +1,21 @@
 main:
-  - title: "Главная"
-    url: /
+  - title: "Скачать"
+    label: "d.terraz.ru"
+    url: https://d.terraz.ru/
+    icon: download
   - title: "Гайды"
+    label: "База знаний"
     url: /guides/
-  - title: "Правила"
-    url: /rules/
-  - title: "Новости"
-    url: /news/
-  - title: "Карта"
+    icon: book
+  - title: "Статистика"
+    label: "statistics.terraz.ru"
+    url: https://statistics.terraz.ru/
+    icon: chart
+  - title: "Онлайн-карта"
+    label: "map.terraz.ru"
     url: https://map.terraz.ru/
-    target: _blank
-  - title: "Играть"
-    url: /#play
+    icon: map
+  - title: "Архив карт"
+    label: "maps.terraz.ru"
+    url: https://maps.terraz.ru/
+    icon: archive
