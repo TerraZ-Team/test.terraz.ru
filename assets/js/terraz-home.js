@@ -3,18 +3,24 @@
 
   var button = document.querySelector("[data-copy-server]");
   var address = document.querySelector("[data-server-address]");
+  var label = document.querySelector("[data-copy-label]");
   var status = document.querySelector("[data-copy-status]");
+  var video = document.querySelector(".portal-hero__video");
+  var resetTimer = null;
+
+  if (video && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    video.pause();
+    video.removeAttribute("autoplay");
+  }
 
   if (!button || !address) {
     return;
   }
 
-  var defaultStatus = status ? status.textContent.trim() : "";
-  var label = button.querySelector("span");
-  var resetTimer = null;
-
   function fallbackCopy(value) {
     var textarea = document.createElement("textarea");
+    var copied = false;
+
     textarea.value = value;
     textarea.setAttribute("readonly", "");
     textarea.style.position = "fixed";
@@ -22,7 +28,6 @@
     document.body.appendChild(textarea);
     textarea.select();
 
-    var copied = false;
     try {
       copied = document.execCommand("copy");
     } catch (error) {
@@ -41,7 +46,7 @@
       label.textContent = "Скопировано";
     }
     if (status) {
-      status.textContent = "Адрес S.TERRAZ.RU:7777 скопирован.";
+      status.textContent = "Адрес сервера скопирован";
     }
 
     resetTimer = window.setTimeout(function () {
@@ -50,7 +55,7 @@
         label.textContent = "Копировать";
       }
       if (status) {
-        status.textContent = defaultStatus;
+        status.textContent = "";
       }
     }, 1800);
   }

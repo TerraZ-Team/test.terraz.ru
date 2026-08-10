@@ -1,42 +1,39 @@
-{% capture logo_path %}{{ site.logo }}{% endcapture %}
+<header class="portal-header" role="banner">
+  <div class="portal-header__inner">
+    <a class="portal-brand" href="{{ '/' | relative_url }}" aria-label="TerraZ — на главную">
+      <img src="https://terraz.ru/assets/images/terraz-logo.svg" width="96" height="57" alt="TerraZ">
+    </a>
 
-<header class="masthead" role="banner">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" aria-label="Основная навигация">
-        <a class="site-title" href="{{ '/' | relative_url }}" aria-label="TerraZ — на главную">
-          {% unless logo_path == empty %}
-            <img class="site-title__logo" src="{{ logo_path | relative_url }}" alt="">
-          {% else %}
-            <span class="site-title__mark" aria-hidden="true">T</span>
+    <nav class="portal-nav" aria-label="Разделы TerraZ">
+      {% for link in site.data.navigation.main %}
+        {% assign href = link.url %}
+        {% unless link.url contains '://' %}
+          {% assign href = link.url | relative_url %}
+        {% endunless %}
+        <a class="portal-nav__link{% if page.url == link.url %} is-current{% endif %}" href="{{ href }}">{{ link.title }}</a>
+      {% endfor %}
+    </nav>
+
+    <details class="portal-mobile-menu" data-site-menu>
+      <summary class="portal-mobile-menu__button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 7h14M5 12h14M5 17h14"></path>
+        </svg>
+        <span>Меню</span>
+      </summary>
+
+      <nav class="portal-mobile-menu__panel" aria-label="Разделы TerraZ">
+        {% for link in site.data.navigation.main %}
+          {% assign href = link.url %}
+          {% unless link.url contains '://' %}
+            {% assign href = link.url | relative_url %}
           {% endunless %}
-          <span class="site-title__text">TerraZ</span>
-        </a>
-
-        <ul class="visible-links">
-          {%- for link in site.data.navigation.main -%}
-            <li class="masthead__menu-item">
-              <a
-                href="{{ link.url | relative_url }}"
-                {% if link.description %}title="{{ link.description }}"{% endif %}
-                {% if link.target %}target="{{ link.target }}"{% endif %}
-                {% if link.target == '_blank' %}rel="noopener noreferrer"{% endif %}
-              >{{ link.title }}</a>
-            </li>
-          {%- endfor -%}
-        </ul>
-
-        {% if site.search == true %}
-          <button class="search__toggle" type="button" aria-label="Открыть поиск">
-            <i class="fas fa-search" aria-hidden="true"></i>
-          </button>
-        {% endif %}
-
-        <button class="greedy-nav__toggle hidden" type="button" aria-label="Открыть меню">
-          <span class="navicon" aria-hidden="true"></span>
-        </button>
-        <ul class="hidden-links hidden"></ul>
+          <a class="portal-mobile-menu__link{% if page.url == link.url %} is-current{% endif %}" href="{{ href }}">
+            <span>{{ link.title }}</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5"></path></svg>
+          </a>
+        {% endfor %}
       </nav>
-    </div>
+    </details>
   </div>
 </header>
