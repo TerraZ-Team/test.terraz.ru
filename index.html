@@ -2,7 +2,7 @@
 layout: default
 permalink: /
 title: "TerraZ — русскоязычный сервер Terraria"
-description: "Русскоязычный сервер Terraria TerraZ. Подключайтесь к s.terraz.ru:7777, открывайте гайды, статистику и карты проекта."
+description: "Портал русскоязычного сервера Terraria TerraZ: подключение, гайды, статистика, онлайн-карта и архив миров."
 classes:
   - terraz-home-page
 ---
@@ -26,8 +26,9 @@ classes:
       >
 
       <div class="portal-hero__copy">
-        <p class="portal-eyebrow">Русскоязычный сервер Terraria</p>
-        <h1 id="portal-hero-title">Играй<br>уже сейчас</h1>
+        <p class="portal-eyebrow">Игровой портал TerraZ</p>
+        <h1 id="portal-hero-title">Всё TerraZ<br>в одном месте</h1>
+        <p class="portal-hero__lead">Сервер, гайды, статистика и карты проекта без лишних переходов и декоративной суеты.</p>
       </div>
 
       <div class="portal-connect" aria-label="Подключение к серверу TerraZ">
@@ -45,6 +46,83 @@ classes:
         </a>
 
         <p class="portal-copy-status" id="portal-copy-status" data-copy-status aria-live="polite"></p>
+      </div>
+
+      <a class="portal-hero__hint" href="#portal-services">
+        Разделы проекта
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 8 5 5 5-5"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="portal-hub" id="portal-services" aria-labelledby="portal-services-title">
+    <div class="portal-hub__container">
+      <div class="portal-hub__intro">
+        <div>
+          <p class="portal-hub__kicker">TerraZ Hub</p>
+          <h2 id="portal-services-title">Сервисы проекта</h2>
+        </div>
+        <p>Портал теперь работает как единая точка входа: подключение остаётся на виду, а рабочие разделы собраны ниже в плотном интерфейсе без повторения главной terraz.ru.</p>
+      </div>
+
+      <ul class="portal-status-strip" aria-label="Основная информация о TerraZ">
+        <li><span>Сервер</span><strong>S.TERRAZ.RU:7777</strong></li>
+        <li><span>Игра</span><strong>Terraria</strong></li>
+        <li><span>Режим</span><strong>Survival</strong></li>
+        <li><span>Язык</span><strong>RU</strong></li>
+      </ul>
+
+      <div class="portal-hub__layout">
+        <a class="portal-map-feature" href="https://map.terraz.ru/" aria-label="Открыть онлайн-карту TerraZ">
+          <div class="portal-map-feature__visual" aria-hidden="true">
+            <span class="portal-map-feature__label">Онлайн-карта</span>
+          </div>
+          <div class="portal-map-feature__copy">
+            <span>
+              <small>WebWorldMap</small>
+              <strong>Исследовать текущий мир</strong>
+            </span>
+            <span aria-hidden="true">
+              <svg viewBox="0 0 20 20"><path d="m7 5 5 5-5 5"></path></svg>
+            </span>
+          </div>
+        </a>
+
+        <div class="portal-service-list" aria-label="Быстрый доступ">
+          <p class="portal-service-list__title">Быстрый доступ</p>
+
+          <a class="portal-service-link" href="/guides/">
+            <span class="portal-service-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20"><path d="M4 4.5h5.5A2.5 2.5 0 0 1 12 7v9a2.5 2.5 0 0 0-2.5-2.5H4zM16 4.5h-1.5A2.5 2.5 0 0 0 12 7v9a2.5 2.5 0 0 1 2.5-2.5H16z"></path></svg>
+            </span>
+            <span><strong>Гайды</strong><small>База знаний и инструкции</small></span>
+            <svg class="portal-service-link__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 5 5-5 5"></path></svg>
+          </a>
+
+          <a class="portal-service-link" href="https://statistics.terraz.ru/">
+            <span class="portal-service-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20"><path d="M4 15V9m6 6V5m6 10v-7"></path></svg>
+            </span>
+            <span><strong>Статистика</strong><small>Игроки и данные сервера</small></span>
+            <svg class="portal-service-link__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 5 5-5 5"></path></svg>
+          </a>
+
+          <a class="portal-service-link" href="https://d.terraz.ru/">
+            <span class="portal-service-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20"><path d="M10 3v9m-4-4 4 4 4-4M4 16h12"></path></svg>
+            </span>
+            <span><strong>Скачать</strong><small>Клиент и необходимые файлы</small></span>
+            <svg class="portal-service-link__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 5 5-5 5"></path></svg>
+          </a>
+
+          <a class="portal-service-link" href="https://maps.terraz.ru/">
+            <span class="portal-service-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20"><path d="M4 5.5 8 4l4 1.5L16 4v10.5L12 16l-4-1.5L4 16zM8 4v10.5m4-9V16"></path></svg>
+            </span>
+            <span><strong>Архив карт</strong><small>Предыдущие миры TerraZ</small></span>
+            <svg class="portal-service-link__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 5 5-5 5"></path></svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
