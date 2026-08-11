@@ -14,24 +14,32 @@ classes:
         <source src="https://d.terraz.ru/static/Eye_of_Cthulhu_By_Cupquake_Terraria_Speed_Art.mp4" type="video/mp4">
       </video>
       <div class="portal-hero__shade"></div>
+      <div class="portal-hero__grain"></div>
     </div>
 
-    <div class="portal-hero__content">
-      <img
-        class="portal-hero__logo"
-        src="https://terraz.ru/assets/images/terraz-logo.svg"
-        width="255"
-        height="150"
-        alt="TerraZ"
-      >
-
-      <div class="portal-hero__copy">
-        <p class="portal-eyebrow">Игровой портал TerraZ</p>
-        <h1 id="portal-hero-title">Всё TerraZ<br>в одном месте</h1>
-        <p class="portal-hero__lead">Сервер, гайды, статистика и карты проекта без лишних переходов и декоративной суеты.</p>
+    <div class="portal-hero__frame">
+      <div class="portal-hero__identity">
+        <img
+          class="portal-hero__logo"
+          src="https://terraz.ru/assets/images/terraz-logo.svg"
+          width="255"
+          height="150"
+          alt="TerraZ"
+        >
+        <p class="portal-eyebrow">Русскоязычный сервер Terraria</p>
+        <h1 id="portal-hero-title">Мир TerraZ<br>всегда рядом</h1>
+        <p class="portal-hero__lead">Подключайся к серверу, открывай карту мира, гайды и статистику из одного места.</p>
       </div>
 
-      <div class="portal-connect" aria-label="Подключение к серверу TerraZ">
+      <aside class="portal-connect" aria-label="Подключение к серверу TerraZ">
+        <div class="portal-connect__heading">
+          <span class="portal-connect__pulse" aria-hidden="true"></span>
+          <div>
+            <small>Подключение</small>
+            <strong>TerraZ Survival</strong>
+          </div>
+        </div>
+
         <button class="portal-address" type="button" data-copy-server aria-describedby="portal-copy-status">
           <span class="portal-address__value" data-server-address>S.TERRAZ.RU:7777</span>
           <span class="portal-address__action">
@@ -41,84 +49,80 @@ classes:
         </button>
 
         <a class="portal-steam" href="steam://rungameid/105600// -j s.terraz.ru -p 7777">
-          Играть через Steam
+          <span>Играть через Steam</span>
           <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 5 5-5 5"></path></svg>
         </a>
 
         <p class="portal-copy-status" id="portal-copy-status" data-copy-status aria-live="polite"></p>
-      </div>
-
-      <a class="portal-hero__hint" href="#portal-services">
-        Разделы проекта
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 8 5 5 5-5"></path></svg>
-      </a>
+      </aside>
     </div>
+
+    <nav class="portal-hero__rail" aria-label="Основные разделы TerraZ">
+      <a href="https://map.terraz.ru/"><span>01</span><strong>Онлайн-карта</strong><small>Текущий мир</small></a>
+      <a href="/guides/"><span>02</span><strong>Гайды</strong><small>База знаний</small></a>
+      <a href="https://statistics.terraz.ru/"><span>03</span><strong>Статистика</strong><small>Данные сервера</small></a>
+      <a href="https://d.terraz.ru/"><span>04</span><strong>Скачать</strong><small>Файлы и клиент</small></a>
+    </nav>
   </section>
 
   <section class="portal-hub" id="portal-services" aria-labelledby="portal-services-title">
     <div class="portal-hub__container">
       <div class="portal-hub__intro">
         <div>
-          <p class="portal-hub__kicker">TerraZ Hub</p>
-          <h2 id="portal-services-title">Сервисы проекта</h2>
+          <p class="portal-hub__kicker">Портал TerraZ</p>
+          <h2 id="portal-services-title">Исследуй проект</h2>
         </div>
-        <p>Портал теперь работает как единая точка входа: подключение остаётся на виду, а рабочие разделы собраны ниже в плотном интерфейсе без повторения главной terraz.ru.</p>
+        <p>Основные сервисы собраны здесь: карта текущего мира занимает центральное место, остальные разделы доступны рядом без лишней навигации.</p>
       </div>
-
-      <ul class="portal-status-strip" aria-label="Основная информация о TerraZ">
-        <li><span>Сервер</span><strong>S.TERRAZ.RU:7777</strong></li>
-        <li><span>Игра</span><strong>Terraria</strong></li>
-        <li><span>Режим</span><strong>Survival</strong></li>
-        <li><span>Язык</span><strong>RU</strong></li>
-      </ul>
 
       <div class="portal-hub__layout">
         <a class="portal-map-feature" href="https://map.terraz.ru/" aria-label="Открыть онлайн-карту TerraZ">
           <div class="portal-map-feature__visual" aria-hidden="true">
-            <span class="portal-map-feature__label">Онлайн-карта</span>
+            <span class="portal-map-feature__label">WebWorldMap · live</span>
+            <span class="portal-map-feature__sun"></span>
+            <span class="portal-map-feature__terrain portal-map-feature__terrain--far"></span>
+            <span class="portal-map-feature__terrain portal-map-feature__terrain--near"></span>
+            <span class="portal-map-feature__marker portal-map-feature__marker--one"></span>
+            <span class="portal-map-feature__marker portal-map-feature__marker--two"></span>
           </div>
           <div class="portal-map-feature__copy">
             <span>
-              <small>WebWorldMap</small>
-              <strong>Исследовать текущий мир</strong>
+              <small>Онлайн-карта</small>
+              <strong>Открыть текущий мир</strong>
+              <em>Регионы, варпы и навигация по карте</em>
             </span>
-            <span aria-hidden="true">
+            <span class="portal-map-feature__arrow" aria-hidden="true">
               <svg viewBox="0 0 20 20"><path d="m7 5 5 5-5 5"></path></svg>
             </span>
           </div>
         </a>
 
-        <div class="portal-service-list" aria-label="Быстрый доступ">
-          <p class="portal-service-list__title">Быстрый доступ</p>
+        <div class="portal-service-list" aria-label="Другие разделы TerraZ">
+          <div class="portal-service-list__heading">
+            <p class="portal-service-list__title">Другие разделы</p>
+            <span>04 сервиса</span>
+          </div>
 
           <a class="portal-service-link" href="/guides/">
-            <span class="portal-service-link__icon" aria-hidden="true">
-              <svg viewBox="0 0 20 20"><path d="M4 4.5h5.5A2.5 2.5 0 0 1 12 7v9a2.5 2.5 0 0 0-2.5-2.5H4zM16 4.5h-1.5A2.5 2.5 0 0 0 12 7v9a2.5 2.5 0 0 1 2.5-2.5H16z"></path></svg>
-            </span>
+            <span class="portal-service-link__index">01</span>
             <span><strong>Гайды</strong><small>База знаний и инструкции</small></span>
             <svg class="portal-service-link__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 5 5-5 5"></path></svg>
           </a>
 
           <a class="portal-service-link" href="https://statistics.terraz.ru/">
-            <span class="portal-service-link__icon" aria-hidden="true">
-              <svg viewBox="0 0 20 20"><path d="M4 15V9m6 6V5m6 10v-7"></path></svg>
-            </span>
+            <span class="portal-service-link__index">02</span>
             <span><strong>Статистика</strong><small>Игроки и данные сервера</small></span>
             <svg class="portal-service-link__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 5 5-5 5"></path></svg>
           </a>
 
           <a class="portal-service-link" href="https://d.terraz.ru/">
-            <span class="portal-service-link__icon" aria-hidden="true">
-              <svg viewBox="0 0 20 20"><path d="M10 3v9m-4-4 4 4 4-4M4 16h12"></path></svg>
-            </span>
+            <span class="portal-service-link__index">03</span>
             <span><strong>Скачать</strong><small>Клиент и необходимые файлы</small></span>
             <svg class="portal-service-link__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 5 5-5 5"></path></svg>
           </a>
 
           <a class="portal-service-link" href="https://maps.terraz.ru/">
-            <span class="portal-service-link__icon" aria-hidden="true">
-              <svg viewBox="0 0 20 20"><path d="M4 5.5 8 4l4 1.5L16 4v10.5L12 16l-4-1.5L4 16zM8 4v10.5m4-9V16"></path></svg>
-            </span>
+            <span class="portal-service-link__index">04</span>
             <span><strong>Архив карт</strong><small>Предыдущие миры TerraZ</small></span>
             <svg class="portal-service-link__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 5 5-5 5"></path></svg>
           </a>
